@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Proyecto DIW Víctor Navarro</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS de Bootstrap -->
+
+
+	<!-- Iconos FontAwesome -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style type="text/css">
+		body {
+			height: auto;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			background-color: goldenrod;
+		}
+
+		.topbot {
+			background-color: black;
+			color: white;
+			height: auto;
+			border-color: black;
+			border-style: solid;
+			border-radius: 10px;
+			padding-left: 15px;
+			padding-right: 15px;
+
+		}
+
+
+		ul {
+			padding: 0;
+			text-align: center;
+		}
+
+		li {
+			display: inline;
+		}
+
+		li a {
+			text-decoration: none;
+			display: inline-block;
+			width: 20%;
+			text-align: center;
+			line-height: 3;
+			color: white;
+			border-color: black;
+			border-style: solid;
+			border-radius: 10px;
+		}
+
+		li a:hover {
+			background: goldenrod;
+			border-color: black;
+			border-style: solid;
+			border-radius: 10px;
+		}
+
+		li a:active {
+			background: red;
+			color: white;
+		}
+
+		h1 a {
+			color: white;
+			text-decoration: none;
+			padding-left: 15px;
+		}
+
+
+
+		.contenedor {
+			height: auto;
+			background-color: white;
+			border-style: solid;
+			border-radius: 10px;
+			padding-left: 30px;
+		}
+
+
+		.bot {
+			text-align: center;
+			padding-top: 15px;
+			margin-bottom: 10px;
+		}
+
+		a i {
+			color: white;
+			padding: 30px;
+		}
+
+		.disabled {
+			cursor: not-allowed;
+			pointer-events: none;
+			background: goldenrod;
+			border-color: black;
+			border-style: solid;
+			border-radius: 10px;
+		}
+
+
+		.wrapper {
+			display: table-row;
+		}
+
+		.main {
+			display: table-cell;
+			padding-right: 30px;
+			padding-bottom: 20px;
+		}
+
+		.sidebar {
+			display: table-cell;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+
+
+
+		
+		/* Dropdown Button */
+		.dropbtn {
+			background-color: goldenrod;
+			color: white;
+			padding: 20px;
+			width: 150px;
+			border: none;
+		}
+
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+		.dropdown:hover .dropbtn {
+			background-color: black;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+		<div id="contenedor" class="row">
+
+			<div class="topbot">
+				<h1><a href="../Inicio.html">Página de Inicio</a></h1>
+				<hr>
+				<ul>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="Viajes.html">Viajes</a> </li>
+					<li><a href="Musica.html" class="disabled">Musica</a></li>
+					<li><a href="Deporte.html">Deporte</a></li>
+				</ul>
+			</div>
+
+
+			<div class="contenedor">
+				<h2>Música</h2>
+
+
+				<div class="wrapper">
+					<div class="main">
+						<p>
+							La música es un arte que estimula nuestros sentidos y nos ayuda a relajarnos e incluso
+							concentrarnos
+						</p>
+						<p>
+							En los menus desplegables encontraras información sobre los distintos estilos musicales
+							y sus principales representantes.
+						</p>
+						<div>
+							<img src="../apartados/img/musica.jpg" width="500px" height="280px">
+						</div>
+
+					</div>
+					<div class="sidebar">
+						<div class="dropdown">
+							<button class="dropbtn">Géneros</button>
+							<div class="dropdown-content">
+								<a href="#">Clásica</a>
+								<a href="#">Pop</a>
+								<a href="#">Rock</a>
+								<a href="#">Reggaeton</a>
+								<a href="#">Trap</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+			<div class="topbot">
+				<div class="bot">
+					<p>Diseñado por: <a href="https://github.com/VitoNC">Víctor Navarro Castillo</a></p>
+					<a href="../Contacto.html"><i class="fa fa-whatsapp" style="font-size:32px"></i></a>
+					<a href="https://www.instagram.com/victornavarro0/"><i class="fa fa-instagram"
+							style="font-size:32px"></i></a>
+					<a href="https://github.com/VitoNC"><i class="fa fa-github" style="font-size:32px"></i></a>
+					<a href="../Contacto.html"><i class="fa fa-envelope" style="font-size:32px"></i></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
