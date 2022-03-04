@@ -104,6 +104,38 @@
 			pointer-events: none;
 			background: goldenrod;
 		}
+
+
+		.sprite {
+            width: 81.25px;
+            height: 83px;
+            background: url('img/run.png') left center;
+			align-items: center;
+
+            animation: play .5s steps(8, end) infinite;
+
+        }
+
+        @keyframes play {
+            from {
+                background-position: 0px;
+            }
+
+            to {
+                background-position: -660px;
+            }
+
+        }
+
+        @-moz-keyframes play {
+            from {
+                background-position: 0px;
+            }
+
+            to {
+                background-position: -660px;
+            }
+        }
 	</style>
 
 
@@ -131,19 +163,84 @@
 			</div>
 
 			<div class="contenedor">
-				<h2>Blog</h2>
-				<h3>Aqui vamos a introducir el contenido de la página de Inicio</h3>
-				<p>1. Responsive design (Diseño web adaptable). (3 puntos)
-					Todas las páginas serán responsive y verse de forma correcta en los tamaños de pantalla sm,
-					md y lg.
-					El sitio deberá contener un mínimo de 6 páginas:
-					- Página principal que haga uso únicamente de una hoja de estilos css compilada en
-					less.
-					- 2 páginas realizadas con bootstrap 5.
-					- 2 páginas que utilicen únicamente css3 para la presentación del documento.
-					- 1 página de diseño libre en la que se podrá utilizar cualquier framework relacionado
-					con el diseño que no se haya visto en clase.
-				</p>
+				<div class="page-header">
+					<h1>Deportes<div class="sprite"></div></h1>
+					<h2>Estos son los deportes mas practicados en el mundo</h2>
+				</div>
+
+		
+		
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Beckenbauer</h3>
+						<img class="img-responsive" src="./img/beckenbauer.jpg" alt="Frank Beckenbauer" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Cruyff</h3>
+						<img class="img-responsive" src="./img/cruyff.jpg" alt="Johan Cruyff" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-sm"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Di Stefano</h3>
+						<img class="img-responsive" src="./img/distefano.jpg" alt="Alfredo Di Stefano" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-md"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Iniesta</h3>
+						<img class="img-responsive" src="./img/iniesta.jpg" alt="Don Andrés" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-lg"></div>
+					<div class="clearfix visible-sm"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Maradona</h3>
+						<img class="img-responsive" src="./img/maradona.jpg" alt="Diego Armando Maradona" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Messi</h3>
+						<img class="img-responsive" src="./img/messi.jpg" alt="Leo Messi" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-md"></div>
+					<div class="clearfix visible-sm"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Pelé</h3>
+						<img class="img-responsive" src="./img/pele.jpg" alt="Edson Arantes do Nascimento" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Platini</h3>
+						<img class="img-responsive" src="./img/platini.jpg" alt="Michel Platini" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-lg"></div>
+					<div class="clearfix visible-sm"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Ronaldinho</h3>
+						<img class="img-responsive" src="./img/ronaldinho.jpg" alt="Ronaldo de Assis Moreira" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-md"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Cristiano Ronaldo</h3>
+						<img class="img-responsive" src="./img/ronaldo.jpg" alt="Cristino Ronaldo" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-sm"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Ronaldo Nazario</h3>
+						<img class="img-responsive" src="./img/ronaldo_nazario.jpg" alt="Ronaldo Nazario" />
+					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<h3>Van Basten</h3>
+						<img class="img-responsive" src="./img/vanbasten.jpg" alt="Marco Van Basten" />
+					</div>
+				</div>
 			</div>
 
 

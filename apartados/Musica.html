@@ -6,15 +6,22 @@
 	<title>Proyecto DIW Víctor Navarro</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- CSS de Bootstrap -->
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 
 	<!-- Iconos FontAwesome -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-	<style type="text/css">
+	<style type="text/css" !important>
 		body {
 			height: auto;
 			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -73,8 +80,6 @@
 			padding-left: 15px;
 		}
 
-
-
 		.contenedor {
 			color: black;
 			border-style: solid;
@@ -85,6 +90,10 @@
 			background-image: url('../inicio.jpg');
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
+		}
+
+		.row {
+			margin-bottom: 15px;
 		}
 
 
@@ -106,65 +115,339 @@
 		}
 
 
-		.wrapper {
-			display: table-row;
-		}
 
-		.main {
-			display: table-cell;
-			padding-right: 30px;
-			padding-bottom: 20px;
-		}
-
-		.sidebar {
-			display: table-cell;
-
-			background-color: black;
-			padding: auto;
+		.imagen {
+			width: 340px;
+			height: 250px;
+			position: relative;
 		}
 
 
+		ul.notas li#violin {
+			width: 60px;
+			height: 110px;
+			top: 190px;
+			left: 35px;
+		}
+		ul.notas li#violin p {
+			margin: -140px 0 0 5px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
 
-		
-		/* Dropdown Button */
-		.dropbtn {
-			background-color: goldenrod;
-			color: white;
-			padding: 20px;
-			width: 150px;
-			border: none;
+		ul.notas li#viola {
+			width: 55px;
+			height: 130px;
+			top: 170px;
+			left: 90px;
+		}
+		ul.notas li#viola p {
+			margin: -160px 0 0 5px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#chelo {
+			width: 80px;
+			height: 200px;
+			top: 100px;
+			left: 150px;
+		}
+		ul.notas li#chelo p {
+			margin: -215px 0 0 -3px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#contrab {
+			width: 105px;
+			height: 240px;
+			top: 60px;
+			left: 230px;
+		}
+		ul.notas li#contrab p {
+			margin: -230px 0 0 -45px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
 		}
 
 
-		/* Dropdown Content (Hidden by Default) */
-		.dropdown-content {
+        ul.notas li#violin:hover p {
+            display: block;
+        }
+
+        ul.notas li#viola:hover p {
+            display: block;
+        }
+
+        ul.notas li#chelo:hover p {
+            display: block;
+        }
+
+		ul.notas li#contrab:hover p {
+            display: block;
+        }
+
+		ul.notas li {
+			list-style: none;
 			display: none;
 			position: absolute;
-			background-color: #f1f1f1;
-			min-width: 160px;
+			border: medium solid white;
+			background: url("esta_imagen_no_existe");
 		}
 
-		/* Links inside the dropdown */
-		.dropdown-content a {
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
+		div.mapa_imagen:hover ul.notas li {
 			display: block;
 		}
 
-		/* Change color of dropdown links on hover */
-		.dropdown-content a:hover {
-			background-color: #ddd;
+		ul.notas li#corneta {
+			width: 100px;
+			height: 130px;
+			top: 65px;
+			left: 20px;
+		}
+		ul.notas li#corneta p {
+			margin: -120px 0 0 45px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
 		}
 
-		/* Show the dropdown menu on hover */
-		.dropdown:hover .dropdown-content {
-			display: block;
+		ul.notas li#tuba {
+			width: 80px;
+			height: 130px;
+			top: 65px;
+			left: 135px;
+		}
+		ul.notas li#tuba p {
+			margin: -3px 0 0 25px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
 		}
 
-		/* Change the background color of the dropdown button when the dropdown content is shown */
-		.dropdown:hover .dropbtn {
-			background-color: black;
+		ul.notas li#trompe {
+			width: 125px;
+			height: 130px;
+			top: 65px;
+			left: 225px;
+		}
+		ul.notas li#trompe p {
+			margin: -120px 0 0 55px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#trompa {
+			width: 125px;
+			height: 100px;
+			top: 200px;
+			left: 50px;
+		}
+		ul.notas li#trompa p {
+			margin: -30px 0 0 -30px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#tromb {
+			width: 115px;
+			height: 100px;
+			top: 200px;
+			left: 200px;
+		}
+		ul.notas li#tromb p {
+			margin: -35px 0 0 80px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+
+        ul.notas li#corneta:hover p {
+            display: block;
+        }
+
+        ul.notas li#tuba:hover p {
+            display: block;
+        }
+
+        ul.notas li#trompe:hover p {
+            display: block;
+        }
+
+		ul.notas li#trompa:hover p {
+            display: block;
+        }
+
+		ul.notas li#tromb:hover p {
+            display: block;
+        }
+
+		ul.notas li#fagot {
+			width: 110px;
+			height: 150px;
+			top: 65px;
+			left: 20px;
+		}
+		ul.notas li#fagot p {
+			margin: -134px 0 0 55px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#saxo {
+			width: 90px;
+			height: 150px;
+			top: 65px;
+			left: 140px;
+		}
+		ul.notas li#saxo p {
+			margin: -85px 0 0 -25px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#oboe {
+			width: 110px;
+			height: 150px;
+			top: 65px;
+			left: 235px;
+		}
+		ul.notas li#oboe p {
+			margin: -135px 0 0 55px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#clarinete {
+			width: 125px;
+			height: 130px;
+			top: 173px;
+			left: 20px;
+		}
+		ul.notas li#clarinete p {
+			margin: -40px 0 0 -5px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#flauta {
+			width: 190px;
+			height: 60px;
+			top: 225px;
+			left: 155px;
+		}
+		ul.notas li#flauta p {
+			margin: -15px 0 0 70px;
+			padding: .3em;
+			display: none;
+			background: #FFF;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+
+        ul.notas li#fagot:hover p {
+            display: block;
+        }
+
+        ul.notas li#saxo:hover p {
+            display: block;
+        }
+
+        ul.notas li#oboe:hover p {
+            display: block;
+        }
+
+		ul.notas li#clarinete:hover p {
+            display: block;
+        }
+
+		ul.notas li#flauta:hover p {
+            display: block;
+        }
+
+
+
+		.sprite {
+			width: 54.34px;
+			height: 52px;
+			background: url('img/musica.png') left center;
+
+			animation: play 4s steps(6, end) infinite;
+
+		}
+
+		@keyframes play {
+			from {
+				background-position: -10px;
+			}
+
+			to {
+				background-position: -326px;
+			}
+
+		}
+
+		@-moz-keyframes play {
+			from {
+				background-position: 0px;
+			}
+
+			to {
+				background-position: -326px;
+			}
 		}
 	</style>
 
@@ -179,6 +462,7 @@
 
 			<div class="topbot">
 				<h1><a href="../Inicio.html">Mi Blog Personal</a></h1>
+
 				<hr>
 				<ul>
 					<li><a href="Blog.html">Blog</a></li>
@@ -190,41 +474,85 @@
 
 
 			<div class="contenedor">
-				<h2>Música</h2>
-
-
-				<div class="wrapper">
-					<div class="main">
-						<p>
-							La música es un arte que estimula nuestros sentidos y nos ayuda a relajarnos e incluso
-							concentrarnos
-						</p>
-						<p>
-							En los menus desplegables encontraras información sobre los distintos estilos musicales
-							y sus principales representantes.
-						</p>
-						<div>
-							<img src="../apartados/img/musica.jpg" width="500px" height="280px">
+				<div class="page-header">
+					<h1>Musica<div class="sprite"></div>
+					</h1>
+					<h2>Estos son los instrumentos de cada familia musical</h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-sm-6 col-xs-12">
+						<h3>Cuerda Frotada</h3>
+						<div class="mapa_imagen">
+							<img class="img-responsive imagen" src="./img//cuerda.jpg" alt="Cuerda Fortada" />
+							<ul class="notas">
+								<li id="violin">
+									<p>Violin</p>
+								</li>
+								<li id="viola">
+									<p>Viola</p>
+								</li>
+								<li id="chelo">
+									<p>Violonchelo</p>
+								</li>
+								<li id="contrab">
+									<p>Contrabajo</p>
+								</li>
+							</ul>
 						</div>
-
 					</div>
-					<div class="sidebar">
-						<div class="dropdown">
-							<button class="dropbtn">Géneros</button>
-							<div class="dropdown-content">
-								<a href="#">Clásica</a>
-								<a href="#">Pop</a>
-								<a href="#">Rock</a>
-								<a href="#">Reggaeton</a>
-								<a href="#">Trap</a>
-							</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="col-lg-4 col-sm-6 col-xs-12">
+						<h3>Viento Metal</h3>
+						<div class="mapa_imagen">
+							<img class="img-responsive imagen" src="./img/viento_metal.jpg" alt="Viento Metal" />
+							<ul class="notas">
+								<li id="corneta">
+									<p>Corneta</p>
+								</li>
+								<li id="tuba">
+									<p>Tuba</p>
+								</li>
+								<li id="trompe">
+									<p>Trompeta</p>
+								</li>
+								<li id="trompa">
+									<p>Trompa</p>
+								</li>
+								<li id="tromb">
+									<p>Trombón</p>
+								</li>
+							</ul>
 						</div>
-
 					</div>
+					<div class="clearfix visible-xs"></div>
+					<div class="clearfix visible-sm"></div>
+					<div class="col-lg-4 col-sm-6 col-xs-12">
+						<h3>Viento Madera</h3>
+						<div class="mapa_imagen">
+							<img class="img-responsive imagen" src="./img/viento_madera.jpg" alt="Viento Madera" />
+							<ul class="notas">
+								<li id="fagot">
+									<p>Fagot</p>
+								</li>
+								<li id="saxo">
+									<p>Saxofon</p>
+								</li>
+								<li id="oboe">
+									<p>Oboe</p>
+								</li>
+								<li id="clarinete">
+									<p>Clarinete</p>
+								</li>
+								<li id="flauta">
+									<p>Flauta</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
 				</div>
 
 			</div>
-
 
 
 
