@@ -22,12 +22,6 @@
 
 		}
 
-		h1,
-		h2,
-		h3 {
-			text-transform: uppercase;
-			text-decoration: underline;
-		}
 
 		.topbot {
 			background-color: black;
@@ -38,7 +32,13 @@
 			border-radius: 10px;
 			padding-left: 15px;
 			padding-right: 15px;
-
+		}
+		
+		h1,
+		h2,
+		h3 {
+			text-transform: uppercase;
+			text-decoration: underline;
 		}
 
 
@@ -86,10 +86,11 @@
 			background-image: url('inicio.jpg');
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
+			padding-bottom: 20px;
 		}
 
 		img {
-			width: 100%;
+			width: 20%;
 			height: auto;
 		}
 
@@ -104,14 +105,48 @@
 			padding: 30px;
 		}
 
+		a {
+			text-decoration: none;
+			display: inline-block;
+			width: 20%;
+			text-align: center;
+			line-height: 3;
+			color: white;
+			border-color: black;
+			border-style: solid;
+			border-radius: 10px;
+		}
+
+		.img {
+			font-size: large;
+			color: white;
+			height: 240px;
+			width: auto;
+
+		}
+
+		#libros {
+			background-image: url(./libros.jpg);
+		}
+
+		#musica {
+			background-image: url(./musica.jpg);
+		}
+
+		#viaje {
+			background-image: url(./viajes.jpeg);
+		}
+
+		#deporte {
+			background-image: url(./deporte.jpg);
+		}
+
 
 	</style>
 
 </head>
 
 <body>
-	<!-- Librería jQuery requerida por los plugins de JavaScript -->
-
 
 	<div class="container-fluid">
 
@@ -123,7 +158,7 @@
 				</div>
 				<hr>
 				<ul>
-					<li><a href="apartados/Blog.html">Blog</a></li>
+					<li><a href="apartados/Libros.html">Libros</a></li>
 					<li><a href="apartados/Viajes.html">Viajes</a> </li>
 					<li><a href="apartados/Musica.html">Musica</a></li>
 					<li><a href="apartados/Deporte.html">Deporte</a></li>
@@ -131,30 +166,15 @@
 			</div>
 
 			<div class="contenedor">
-				<h1>BLOG PERSONAL</h1>
-				<h3>En este blog podreis encontrar información sobre mi. Con los diferentes apartados
-					que explicaremos a continuación</h3>
-				<p>
-					
-				</p>
-				<p>
-					a
-				</p>
-				<p>
-					a
-				</p>
-				<p>
-					a
-				</p>
-				<p>
-					a
-				</p>
-				<p>
-					a
-				</p>
-				<p>
-					a
-				</p>
+				<h1>VIAJES, MÚSICA, DEPORTE...</h1>
+				<h3>Sitio Web orientado a informar al público sobre los tres temas más valorados por la sociedad</h3>
+				<div class="imgs">
+					<a href="apartados/Libros.html"><div class="img" id="libros">LIBROS</div></a>
+					<a href="apartados/Viajes.html"><div class="img" id="viaje">VIAJES</div></a>
+					<a href="apartados/Musica.html"><div class="img" id="musica">MUSICA</div></a>
+					<a href="apartados/Deporte.html"><div class="img" id="deporte">DEPORTE</div></a>
+				</div>
+
 			</div>
 
 

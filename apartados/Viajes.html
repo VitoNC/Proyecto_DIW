@@ -7,6 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!--Mapa-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
+
 	<!-- Iconos FontAwesome -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -148,7 +153,6 @@
 
 		}
 
-
 		#berlin {
 			background-image: url("img/berlin.jpg");
 		}
@@ -163,6 +167,10 @@
 
 		#londres {
 			background-image: url("img/londres.jpg");
+		}
+
+		#madrid {
+			background-image: url("img/madrid.jpg");
 		}
 
 		.sprite {
@@ -196,6 +204,18 @@
 				background-position: 1115px;
 			}
 		}
+
+		.mapa {
+			background-color: black; 
+			padding: 10px; color: white;
+		}
+
+		#map {
+			height: 250px; 
+			margin-right: 60px; 
+			margin-left: 60px; 
+			margin-bottom: 20px;
+		}
 	</style>
 
 
@@ -215,7 +235,7 @@
 				<h1><a href="../Inicio.html">Mi Blog Personal</a></h1>
 				<hr>
 				<ul>
-					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="Libros.html">Libros</a></li>
 					<li><a href="Viajes.html" class="disabled">Viajes</a> </li>
 					<li><a href="Musica.html">Musica</a></li>
 					<li><a href="Deporte.html">Deporte</a></li>
@@ -224,14 +244,14 @@
 
 			<div class="contenedor">
 
-					<h2>Viajes</h2>
+				<h2>Viajes</h2>
 
-					<p>
-						A la hora de viajar, hay que tener muy claro el destino y todas las posibilidades
-						que nos brinda el lugar al que tenemos pensado ir.<br> A continuación propongo una guía de
-						algunas de las ciudades más bonitas de Europa.
-					</p>
-					<div class="sprite"></div>
+				<p>
+					A la hora de viajar, hay que tener muy claro el destino y todas las posibilidades
+					que nos brinda el lugar al que tenemos pensado ir.<br> A continuación propongo una guía de
+					algunas de las ciudades más bonitas de Europa.
+				</p>
+				<div class="sprite"></div>
 
 				<h3>Estos son los destinos preferidos por los viajeros</h3>
 				<div class="lista">
@@ -248,19 +268,29 @@
 						<li>
 							<div class="ciudad">LONDRES<br><a href="#" id="londres"></a></div>
 						</li>
+						<li>
+							<div class="ciudad">MADRID<br><a href="#" id="madrid"></a></div>
+						</li>
 					</ul>
 				</div>
+				<div class="mapa">
+					<h3>Situación geográfica</h3>
+					<div id="map">
+					</div>
+				</div>
 			</div>
+
+
 
 
 			<div class="topbot">
 				<div class="bot">
 					<p>Diseñado por: <a href="https://github.com/VitoNC">Víctor Navarro Castillo</a></p>
-					<a href="../Contacto.html"><i class="fa fa-whatsapp" style="font-size:28px"></i></a>
+					<a href="../Contacto.html"><i class="fa fa-whatsapp" style="font-size:32px"></i></a>
 					<a href="https://www.instagram.com/victornavarro0/"><i class="fa fa-instagram"
-							style="font-size:28px"></i></a>
-					<a href="https://github.com/VitoNC"><i class="fa fa-github" style="font-size:28px"></i></a>
-					<a href="../Contacto.html"><i class="fa fa-envelope" style="font-size:28px"></i></a>
+							style="font-size:32px"></i></a>
+					<a href="https://github.com/VitoNC"><i class="fa fa-github" style="font-size:32px"></i></a>
+					<a href="../Contacto.html"><i class="fa fa-envelope" style="font-size:32px"></i></a>
 
 				</div>
 			</div>
@@ -270,3 +300,33 @@
 </body>
 
 </html>
+
+<!-- js Mapa -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+	integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	crossorigin=""></script>
+<script>
+	var map = L.map('map').setView([43.8525872, -12.8611109], 3);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'pk.eyJ1Ijoidml0bzAwIiwiYSI6ImNsMDZnZmZjejEwaGMza3BkdjdrMWJsdmwifQ.q6Tv9r6T0WBhjRwId7pnaA'
+	}).addTo(map);
+
+	berlin = L.marker([52.5065133, 13.1445545]).addTo(map);
+
+	londres = L.marker([51.528308, -0.3817765]).addTo(map);
+
+	praga = L.marker([50.0593325, 14.1854451]).addTo(map);
+
+	paris = L.marker([48.85877, 2.2069522]).addTo(map);
+
+	madrid = L.marker([40.4378698, -3.8196207]).addTo(map);
+
+
+
+</script>

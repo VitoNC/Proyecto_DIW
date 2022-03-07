@@ -7,10 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CSS de Bootstrap -->
-	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
 	<!-- Iconos FontAwesome -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,8 +82,6 @@
 			padding-left: 15px;
 		}
 
-
-
 		.contenedor {
 			color: black;
 			border-style: solid;
@@ -116,15 +111,14 @@
 			background: goldenrod;
 		}
 
-
 		.sprite {
 			margin: auto;
-			width: 81.25px;
-			height: 83px;
-			background: url('img/run.png') left center;
+			width: 35.17px;
+			height: 50px;
+			background: url('img/libro.png') left center;
 			align-items: center;
 
-			animation: play .5s steps(8, end) infinite;
+			animation: play .65s steps(6, end) infinite;
 
 		}
 
@@ -134,7 +128,7 @@
 			}
 
 			to {
-				background-position: -660px;
+				background-position: -211px;
 			}
 
 		}
@@ -145,8 +139,39 @@
 			}
 
 			to {
-				background-position: -660px;
+				background-position: -211px;
 			}
+		}
+
+		.paginacion {
+			margin: 20px 0;
+		}
+
+		.paginacion ul {
+			list-style: none;
+			text-align: center;
+		}
+
+		.paginacion ul li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		.paginacion ul li a {
+			display: block;
+			padding: 10px 20px;
+			color: #fff;
+			background: #024959;
+			text-decoration: none;
+		}
+
+		.paginacion ul li a:hover {
+			background: #037E8C;
+		}
+
+		.paginacion ul li .active {
+			background: #037E8C;
+			font-weight: bold;
 		}
 	</style>
 
@@ -167,69 +192,54 @@
 				<h1><a href="../Inicio.html">Mi Blog Personal</a></h1>
 				<hr>
 				<ul>
-					<li><a href="Libros.html">Libros</a></li>
+					<li><a href="Libros.html" class="disabled">Libros</a></li>
 					<li><a href="Viajes.html">Viajes</a> </li>
 					<li><a href="Musica.html">Musica</a></li>
-					<li><a href="Deporte.html" class="disabled">Deporte</a></li>
+					<li><a href="Deporte.html">Deporte</a></li>
 				</ul>
 			</div>
 
 			<div class="contenedor">
 				<div class="page-header">
-					<h2>Deportes</h2>
+					<h2>Libros</h2>
 					<p>
-						La práctica del deporte es un derecho humano, y uno de los principios fundamentales del
-						Olimpismo es que «toda persona debe tener la posibilidad de practicar deporte sin discriminación
-						de ningún tipo y dentro del espíritu olímpico, que exige comprensión mutua, solidaridad y
-						espíritu de amistad y de juego limpio»
+						Desde los orígenes la humanidad ha tenido que hacer frente a una cuestión fundamental: la forma
+						de
+						preservar y transmitir su cultura, es decir, sus creencias y conocimientos, tanto en el espacio
+						como
+						en el tiempo.
+						<br>
+						El planteamiento de esta cuestión supone, por un lado, determinar la forma de garantizar la
+						integridad intelectual del contenido de la obra y la conservación del soporte en el que fue
+						plasmada
+						y, por otro, encontrar el medio por el cual se mantendrá inalterada la intención o finalidad
+						para la
+						cual se concibió.
 					</p>
 					<div class="sprite"></div>
 				</div>
 
+				<h3>Los 5 Libros más vendidos de la historia</h3>
+
+				<section class="paginacion">
+					<ul>
+						<li><a href="#" onclick="muestra1()">1</a></li>
+						<li><a href="#" onclick="muestra2()">2</a></li>
+						<li><a href="#" onclick="muestra3()">3</a></li>
+						<li><a href="#" onclick="muestra4()">4</a></li>
+						<li><a href="#" onclick="muestra5()">5</a></li>
+					</ul>
+				</section>
+
+				<p>Haz click para descubrir cuales son...</p>
+				<div id="l1" style="display: none;">1. La Biblia</div>
+				<div id="l2" style="display: none;">2. Libro Rojo de Mao</div>
+				<div id="l3" style="display: none;">3. Don Quijote de la Mancha</div>
+				<div id="l4" style="display: none;">4. Harry Potter y la Piedra Filosofal</div>
+				<div id="l5" style="display: none;">5. Historia de dos Ciudades</div>
 
 
-				<div class="row" style="padding-right: 10px;">
-					<h3>Noticias del mundo deportivo</h3>
 
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>Grant Fisher, el blanco que amenaza el monopolio negro en el fondo mundial</h3>
-						<img class="img-responsive" src="./img/noticia1.jpg" alt="Noticia 1" width="90%" />
-					</div>
-					<div class="clearfix visible-xs"></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>Pochettino: "Mbappé es nuestro y esperemos que lo sea por mucho tiempo"</h3>
-						<img class="img-responsive" src="./img/noticia2.jpg" alt="Noticia 2" width="90%" />
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>Di Dos periodistas acuden a Ucrania y se salvan...¡gracias a Maradona! Que Suerte</h3>
-						<img class="img-responsive" src="./img/noticia3.jpg" alt="Noticia 3" width="90%" />
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>Betis y Valencia sabrán el jueves cuántas entradas tendrán para la final de Copa</h3>
-						<img class="img-responsive" src="./img/noticia4.jpg" alt="Noticia 4" width="90%" />
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>Paco Cabezas: "A Neymar le falta 'su' partido y el Bernabéu es el escenario perfecto"</h3>
-						<img class="img-responsive" src="./img/noticia5.jpg" alt="Noticia 5" width="90%" />
-					</div>
-					<div class="clearfix visible-xs"></div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>La Federacion Internacional veta a los equipos rusos y bielorrusos por los conflictos</h3>
-						<img class="img-responsive" src="./img/noticia6.jpg" alt="Noticia 6" width="90%" />
-					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>El City Group ofrece 180 millones para comprar el Atlético Mineiro. Irrechazable</h3>
-						<img class="img-responsive" src="./img/noticia7.jpg" alt="Noticia 7" width="90%" />
-					</div>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<h3>Ganna arrasa, Evenepoel y Pogacar se marcan y Landa naufraga en Lido di Camaiore</h3>
-						<img class="img-responsive" src="./img/noticia8.jpg" alt="Noticia 8" width="90%" />
-					</div>
-
-				</div>
 			</div>
 
 
@@ -250,3 +260,20 @@
 </body>
 
 </html>
+<script>
+	function muestra1() {
+		document.getElementById("l1").style = "display: block;"
+	}
+	function muestra2() {
+		document.getElementById("l2").style = "display: block;"
+	}	
+	function muestra3() {
+		document.getElementById("l3").style = "display: block;"
+	}	
+	function muestra4() {
+		document.getElementById("l4").style = "display: block;"
+	}	
+	function muestra5() {
+		document.getElementById("l5").style = "display: block;"
+	}
+</script>
