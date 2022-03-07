@@ -8,24 +8,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Iconos FontAwesome -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-	<style type="text/css" !important>
+	<style type="text/css">
 		body {
 			height: auto;
 			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 			background-color: goldenrod;
+			text-align: center;
 		}
 
 		.topbot {
@@ -37,7 +34,15 @@
 			border-radius: 10px;
 			padding-left: 15px;
 			padding-right: 15px;
+			text-align: center;
+		}
 
+		h1,
+		h2,
+		h3,
+		h4 {
+			text-transform: uppercase;
+			text-decoration: underline;
 		}
 
 
@@ -115,22 +120,39 @@
 		}
 
 
+		.mapa_imagen {
+			text-align: center;
+		}
 
 		.imagen {
-			width: 340px;
-			height: 250px;
+			width: 270px;
+			height: 210px;
 			position: relative;
+			margin: auto;
+		}
+
+		ul.notas li {
+			list-style: none;
+			display: none;
+			position: absolute;
+			background: url("esta_imagen_no_existe");
+		}
+
+		div.mapa_imagen:hover ul.notas li {
+			display: block;
 		}
 
 
 		ul.notas li#violin {
-			width: 60px;
-			height: 110px;
-			top: 190px;
+			width: 40px;
+			height: 90px;
+			top: 170px;
 			left: 35px;
+			border: none;
 		}
+
 		ul.notas li#violin p {
-			margin: -140px 0 0 5px;
+			margin: -115px 0 0 -5px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -141,12 +163,14 @@
 
 		ul.notas li#viola {
 			width: 55px;
-			height: 130px;
-			top: 170px;
-			left: 90px;
+			height: 110px;
+			top: 150px;
+			left: 70px;
+			border: none;
 		}
+
 		ul.notas li#viola p {
-			margin: -160px 0 0 5px;
+			margin: -130px 0 0 0px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -156,13 +180,15 @@
 		}
 
 		ul.notas li#chelo {
-			width: 80px;
-			height: 200px;
+			width: 65px;
+			height: 160px;
 			top: 100px;
-			left: 150px;
+			left: 120px;
+			border: none;
 		}
+
 		ul.notas li#chelo p {
-			margin: -215px 0 0 -3px;
+			margin: -185px 0 0 -10px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -172,13 +198,15 @@
 		}
 
 		ul.notas li#contrab {
-			width: 105px;
-			height: 240px;
+			width: 90px;
+			height: 200px;
 			top: 60px;
-			left: 230px;
+			left: 180px;
+			border: none;
 		}
+
 		ul.notas li#contrab p {
-			margin: -230px 0 0 -45px;
+			margin: -195px 0 0 -50px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -188,42 +216,128 @@
 		}
 
 
-        ul.notas li#violin:hover p {
-            display: block;
-        }
-
-        ul.notas li#viola:hover p {
-            display: block;
-        }
-
-        ul.notas li#chelo:hover p {
-            display: block;
-        }
-
-		ul.notas li#contrab:hover p {
-            display: block;
-        }
-
-		ul.notas li {
-			list-style: none;
-			display: none;
-			position: absolute;
-			border: medium solid white;
-			background: url("esta_imagen_no_existe");
-		}
-
-		div.mapa_imagen:hover ul.notas li {
+		ul.notas li#violin:hover p {
 			display: block;
 		}
 
+		ul.notas li#viola:hover p {
+			display: block;
+		}
+
+		ul.notas li#chelo:hover p {
+			display: block;
+		}
+
+		ul.notas li#contrab:hover p {
+			display: block;
+		}
+
+
+
+		ul.notas li#arpa {
+			width: 70px;
+			height: 200px;
+			top: 60px;
+			left: 20px;
+			border: none;
+		}
+
+		ul.notas li#arpa p {
+			margin: -185px 0 0 45px;
+			padding: .3em;
+			display: none;
+			background: black;
+			color: white;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#laud {
+			width: 60px;
+			height: 160px;
+			top: 100px;
+			left: 90px;
+			border: none;
+		}
+
+		ul.notas li#laud p {
+			margin: -180px 0 0 7px;
+			padding: .3em;
+			display: none;
+			background: black;
+			color: white;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#banjo {
+			width: 55px;
+			height: 160px;
+			top: 100px;
+			left: 155px;
+			border: none;
+		}
+
+		ul.notas li#banjo p {
+			margin: -175px 0 0 0;
+			padding: .3em;
+			display: none;
+			background: black;
+			color: white;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#guit {
+			width: 65px;
+			height: 200px;
+			top: 60px;
+			left: 215px;
+			border: none;
+		}
+
+		ul.notas li#guit p {
+			margin: -190px 0 0 -50px;
+			padding: .3em;
+			display: none;
+			background: black;
+			color: white;
+			opacity: 0.65;
+			position: absolute;
+			top: 100%;
+		}
+
+		ul.notas li#arpa:hover p {
+			display: block;
+		}
+
+		ul.notas li#laud:hover p {
+			display: block;
+		}
+
+		ul.notas li#banjo:hover p {
+			display: block;
+		}
+
+		ul.notas li#guit:hover p {
+			display: block;
+		}
+
+
+
 		ul.notas li#corneta {
-			width: 100px;
-			height: 130px;
+			width: 80px;
+			height: 110px;
 			top: 65px;
 			left: 20px;
+			border: none;
 		}
+
 		ul.notas li#corneta p {
-			margin: -120px 0 0 45px;
+			margin: -110px 0 0 30px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -233,13 +347,15 @@
 		}
 
 		ul.notas li#tuba {
-			width: 80px;
-			height: 130px;
+			width: 70px;
+			height: 105px;
 			top: 65px;
-			left: 135px;
+			left: 110px;
+			border: none;
 		}
+
 		ul.notas li#tuba p {
-			margin: -3px 0 0 25px;
+			margin: 2px 0 0 15px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -249,13 +365,15 @@
 		}
 
 		ul.notas li#trompe {
-			width: 125px;
-			height: 130px;
+			width: 90px;
+			height: 110px;
 			top: 65px;
-			left: 225px;
+			left: 190px;
+			border: none;
 		}
+
 		ul.notas li#trompe p {
-			margin: -120px 0 0 55px;
+			margin: -110px 0 0 25px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -265,13 +383,15 @@
 		}
 
 		ul.notas li#trompa {
-			width: 125px;
-			height: 100px;
-			top: 200px;
-			left: 50px;
+			width: 105px;
+			height: 85px;
+			top: 180px;
+			left: 40px;
+			border: none;
 		}
+
 		ul.notas li#trompa p {
-			margin: -30px 0 0 -30px;
+			margin: -25px 0 0 -30px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -281,13 +401,15 @@
 		}
 
 		ul.notas li#tromb {
-			width: 115px;
-			height: 100px;
-			top: 200px;
-			left: 200px;
+			width: 105px;
+			height: 85px;
+			top: 180px;
+			left: 160px;
+			border: none;
 		}
+
 		ul.notas li#tromb p {
-			margin: -35px 0 0 80px;
+			margin: -25px 0 0 55px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -297,34 +419,38 @@
 		}
 
 
-        ul.notas li#corneta:hover p {
-            display: block;
-        }
+		ul.notas li#corneta:hover p {
+			display: block;
+		}
 
-        ul.notas li#tuba:hover p {
-            display: block;
-        }
+		ul.notas li#tuba:hover p {
+			display: block;
+		}
 
-        ul.notas li#trompe:hover p {
-            display: block;
-        }
+		ul.notas li#trompe:hover p {
+			display: block;
+		}
 
 		ul.notas li#trompa:hover p {
-            display: block;
-        }
+			display: block;
+		}
 
 		ul.notas li#tromb:hover p {
-            display: block;
-        }
+			display: block;
+		}
+
+
 
 		ul.notas li#fagot {
-			width: 110px;
-			height: 150px;
-			top: 65px;
+			width: 90px;
+			height: 130px;
+			top: 60px;
 			left: 20px;
+			border: none;
 		}
+
 		ul.notas li#fagot p {
-			margin: -134px 0 0 55px;
+			margin: -120px 0 0 35px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -334,13 +460,15 @@
 		}
 
 		ul.notas li#saxo {
-			width: 90px;
-			height: 150px;
-			top: 65px;
-			left: 140px;
+			width: 75px;
+			height: 130px;
+			top: 60px;
+			left: 115px;
+			border: none;
 		}
+
 		ul.notas li#saxo p {
-			margin: -85px 0 0 -25px;
+			margin: -100px 0 0 -40px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -350,13 +478,15 @@
 		}
 
 		ul.notas li#oboe {
-			width: 110px;
-			height: 150px;
-			top: 65px;
-			left: 235px;
+			width: 85px;
+			height: 130px;
+			top: 60px;
+			left: 195px;
+			border: none;
 		}
+
 		ul.notas li#oboe p {
-			margin: -135px 0 0 55px;
+			margin: -115px 0 0 40px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -366,13 +496,15 @@
 		}
 
 		ul.notas li#clarinete {
-			width: 125px;
-			height: 130px;
-			top: 173px;
+			width: 100px;
+			height: 105px;
+			top: 160px;
 			left: 20px;
+			border: none;
 		}
+
 		ul.notas li#clarinete p {
-			margin: -40px 0 0 -5px;
+			margin: -30px 0 0 -5px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -382,13 +514,15 @@
 		}
 
 		ul.notas li#flauta {
-			width: 190px;
-			height: 60px;
-			top: 225px;
-			left: 155px;
+			width: 155px;
+			height: 40px;
+			top: 205px;
+			left: 125px;
+			border: none;
 		}
+
 		ul.notas li#flauta p {
-			margin: -15px 0 0 70px;
+			margin: -5px 0 0 50px;
 			padding: .3em;
 			display: none;
 			background: #FFF;
@@ -398,29 +532,30 @@
 		}
 
 
-        ul.notas li#fagot:hover p {
-            display: block;
-        }
+		ul.notas li#fagot:hover p {
+			display: block;
+		}
 
-        ul.notas li#saxo:hover p {
-            display: block;
-        }
+		ul.notas li#saxo:hover p {
+			display: block;
+		}
 
-        ul.notas li#oboe:hover p {
-            display: block;
-        }
+		ul.notas li#oboe:hover p {
+			display: block;
+		}
 
 		ul.notas li#clarinete:hover p {
-            display: block;
-        }
+			display: block;
+		}
 
 		ul.notas li#flauta:hover p {
-            display: block;
-        }
+			display: block;
+		}
 
 
 
 		.sprite {
+			margin: auto;
 			width: 54.34px;
 			height: 52px;
 			background: url('img/musica.png') left center;
@@ -472,86 +607,122 @@
 				</ul>
 			</div>
 
-
 			<div class="contenedor">
 				<div class="page-header">
-					<h1>Musica<div class="sprite"></div>
-					</h1>
-					<h2>Estos son los instrumentos de cada familia musical</h2>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<h3>Cuerda Frotada</h3>
-						<div class="mapa_imagen">
-							<img class="img-responsive imagen" src="./img//cuerda.jpg" alt="Cuerda Fortada" />
-							<ul class="notas">
-								<li id="violin">
-									<p>Violin</p>
-								</li>
-								<li id="viola">
-									<p>Viola</p>
-								</li>
-								<li id="chelo">
-									<p>Violonchelo</p>
-								</li>
-								<li id="contrab">
-									<p>Contrabajo</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix visible-xs"></div>
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<h3>Viento Metal</h3>
-						<div class="mapa_imagen">
-							<img class="img-responsive imagen" src="./img/viento_metal.jpg" alt="Viento Metal" />
-							<ul class="notas">
-								<li id="corneta">
-									<p>Corneta</p>
-								</li>
-								<li id="tuba">
-									<p>Tuba</p>
-								</li>
-								<li id="trompe">
-									<p>Trompeta</p>
-								</li>
-								<li id="trompa">
-									<p>Trompa</p>
-								</li>
-								<li id="tromb">
-									<p>Trombón</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix visible-xs"></div>
-					<div class="clearfix visible-sm"></div>
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<h3>Viento Madera</h3>
-						<div class="mapa_imagen">
-							<img class="img-responsive imagen" src="./img/viento_madera.jpg" alt="Viento Madera" />
-							<ul class="notas">
-								<li id="fagot">
-									<p>Fagot</p>
-								</li>
-								<li id="saxo">
-									<p>Saxofon</p>
-								</li>
-								<li id="oboe">
-									<p>Oboe</p>
-								</li>
-								<li id="clarinete">
-									<p>Clarinete</p>
-								</li>
-								<li id="flauta">
-									<p>Flauta</p>
-								</li>
-							</ul>
-						</div>
-					</div>
+					<h2>Musica</h2>
+					<p>
+						La música contiene dos elementos: el material acústico y la idea intelectual. Ambos no se hallan
+						yuxtapuestos como forma y contenido, sino que se combinan, en la música, para formar una imagen
+						unitaria. Para convertirse en vehículo de la idea intelectual, el material acústico experimenta
+						una preparación pre-musical, mediante un proceso de selección y ordenamiento.
+					</p>
+					<p>
+					<p>
+						La música contiene dos elementos: el material acústico y la idea intelectual. Ambos no se hallan
+						yuxtapuestos como forma y contenido, sino que se combinan, en la música, para formar una imagen
+						unitaria. Para convertirse en vehículo de la idea intelectual, el material acústico experimenta
+						una preparación pre-musical, mediante un proceso de selección y ordenamiento.
+					</p>
+					</p>
+					<p>
+						A continuación ofrecemos una pequeña clasificación de los distintos instrumentos ordenados en familias
+					</p>
+					<div class="sprite"></div>
 
 				</div>
+				<div class="container">
+					<h3>Estos son los instrumentos de cada familia musical</h3>
 
+					<div class="row" style="margin-right: 4em;">
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="mapa_imagen">
+
+								<h4>Cuerda Frotada</h4>
+								<img class="img-responsive imagen" src="./img/cuerda.jpg" alt="Cuerda Fortada" />
+								<ul class="notas">
+									<li id="violin">
+										<p>Violin</p>
+									</li>
+									<li id="viola">
+										<p>Viola</p>
+									</li>
+									<li id="chelo">
+										<p>Violonchelo</p>
+									</li>
+									<li id="contrab">
+										<p>Contrabajo</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="mapa_imagen">
+								<h4>Cuerda Pulsada</h4>
+								<img class="img-responsive imagen" src="./img/cuerda_p.png" alt="Cuerda Fortada" />
+								<ul class="notas">
+									<li id="arpa">
+										<p>Arpa</p>
+									</li>
+									<li id="laud">
+										<p>Laud</p>
+									</li>
+									<li id="banjo">
+										<p>Banjo</p>
+									</li>
+									<li id="guit">
+										<p>Guitarra</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="mapa_imagen">
+								<h4>Viento Metal</h4>
+								<img class="img-responsive imagen" src="./img/viento_metal.jpg" alt="Viento Metal" />
+								<ul class="notas">
+									<li id="corneta">
+										<p>Corneta</p>
+									</li>
+									<li id="tuba">
+										<p>Tuba</p>
+									</li>
+									<li id="trompe">
+										<p>Trompeta</p>
+									</li>
+									<li id="trompa">
+										<p>Trompa</p>
+									</li>
+									<li id="tromb">
+										<p>Trombón</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="mapa_imagen">
+								<h4>Viento Madera</h4>
+								<img class="img-responsive imagen" src="./img/viento_madera.jpg" alt="Viento Madera" />
+								<ul class="notas">
+									<li id="fagot">
+										<p>Fagot</p>
+									</li>
+									<li id="saxo">
+										<p>Saxofon</p>
+									</li>
+									<li id="oboe">
+										<p>Oboe</p>
+									</li>
+									<li id="clarinete">
+										<p>Clarinete</p>
+									</li>
+									<li id="flauta">
+										<p>Flauta</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 

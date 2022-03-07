@@ -7,7 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CSS de Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Iconos FontAwesome -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +23,7 @@
 			height: auto;
 			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 			background-color: goldenrod;
+			text-align: center;
 		}
 
 		.topbot {
@@ -32,6 +36,13 @@
 			padding-left: 15px;
 			padding-right: 15px;
 
+		}
+
+		h1,
+		h2,
+		h3 {
+			text-transform: uppercase;
+			text-decoration: underline;
 		}
 
 
@@ -107,35 +118,36 @@
 
 
 		.sprite {
-            width: 81.25px;
-            height: 83px;
-            background: url('img/run.png') left center;
+			margin: auto;
+			width: 81.25px;
+			height: 83px;
+			background: url('img/run.png') left center;
 			align-items: center;
 
-            animation: play .5s steps(8, end) infinite;
+			animation: play .5s steps(8, end) infinite;
 
-        }
+		}
 
-        @keyframes play {
-            from {
-                background-position: 0px;
-            }
+		@keyframes play {
+			from {
+				background-position: 0px;
+			}
 
-            to {
-                background-position: -660px;
-            }
+			to {
+				background-position: -660px;
+			}
 
-        }
+		}
 
-        @-moz-keyframes play {
-            from {
-                background-position: 0px;
-            }
+		@-moz-keyframes play {
+			from {
+				background-position: 0px;
+			}
 
-            to {
-                background-position: -660px;
-            }
-        }
+			to {
+				background-position: -660px;
+			}
+		}
 	</style>
 
 
@@ -164,13 +176,20 @@
 
 			<div class="contenedor">
 				<div class="page-header">
-					<h1>Deportes<div class="sprite"></div></h1>
-					<h2>Estos son los deportes mas practicados en el mundo</h2>
+					<h2>Deportes</h2>
+					<p>
+						A la hora de viajar, hay que tener muy claro el destino y todas las posibilidades
+						que nos brinda el lugar al que tenemos pensado ir.<br> A continuación propongo una guía de
+						algunas de las ciudades más bonitas de Europa.
+					</p>
+					<div class="sprite"></div>
 				</div>
 
-		
-		
+
+
 				<div class="row">
+					<h3>Estos son los deportes mas practicados en el mundo</h3>
+
 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 						<h3>Beckenbauer</h3>
 						<img class="img-responsive" src="./img/beckenbauer.jpg" alt="Frank Beckenbauer" />
